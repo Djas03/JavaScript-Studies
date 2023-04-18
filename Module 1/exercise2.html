@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 2</title>
+</head>
+<body>  
+    <script>
+        var yearBirth = prompt('Enter the year you were born :');
+        while(yearBirth >= 2023){
+            alert('Please, enter your correct year birth: ')
+            yearBirth = prompt('Enter the year you were born :');
+        }
+
+        var currentYear = prompt('Enter the current year :');
+
+        var finalOld = currentYear - yearBirth;
+
+        alert("The current age is: "+finalOld);
+
+
+    </script>
+    
+</body>
+</html>

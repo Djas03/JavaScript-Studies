@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise</title>
+</head>
+<body>
+    <style>
+        .container{
+            position: relative;
+            height: 500px;
+        }
+
+        .container img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+            transition: 1s;
+        }
+
+        .bullets{
+            text-align: center;
+        }
+
+        .bullet-single{
+            margin:0 8px;
+            cursor: pointer;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border-radius: 10px;
+            background-color: #ccc;
+        }
+
+        .active-bullet{
+            background-color: #333;
+        }
+    </style>
+    <div class="container">
+        <img style="opacity: 1;" src="https://pop.proddigital.com.br/wp-content/uploads/sites/8/2023/01/01-73.jpg">
+        <img src="https://s2.glbimg.com/fP8FcBdhKXgZ2HCLdGl7R8MIHIk=/e.glbimg.com/og/ed/f/original/2017/10/20/rick-and-morty3.png" >
+        <img src="https://img.olhardigital.com.br/wp-content/uploads/2023/01/rick-and-morty.jpg">
+    </div>
+
+    <div class="bullets">
+        <div class="bullet-single active-bullet"></div>
+        <div class="bullet-single"></div>
+        <div class="bullet-single"></div>
+    </div>
+
+
+    <script>
+        var lastindex = 0;
+
+        var images = document.querySelectorAll('.container img');
+
+        images.forEach((item,index)=>{
+            document.querySelectorAll('.bullet-single')[index]
+            .addEventListener('click', ()=>{
+               let lastImage = document.querySelectorAll('.container img')[lastindex];
+               let actualImage = document.querySelectorAll('.container img')[index];
+               
+
+               document.querySelectorAll('.bullet-single')[lastindex]
+               .classList.remove('active-bullet');
+               document.querySelectorAll('.bullet-single')[index]
+               .classList.add('active-bullet');
+
+               lastImage.style.opacity = 0;
+               actualImage.style.opacity = 1;
+
+               lastindex = index;
+               
+            });
+        });
+    </script>
+
+</body>
+</html>

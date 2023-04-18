@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    <script>
+        //-----------------------------
+        //Template Strings
+
+
+        // var name1 = 'Djas';
+        // var content = `
+        // my text
+        // break line 
+        // var name is: ${name}
+        // `
+
+        // console.log (content);
+
+
+        //--------------------------------
+        //block scope
+
+
+        // {
+        //     //scope definition
+        //     let name1 = 'Djas';
+        //     let tests = ()=>{
+        //         console.log('Hello!');
+        //     }
+
+        //     tests();
+        // }
+
+
+        //--------------------------------
+        //Arrow Functions
+        
+        // var func1 = (text,parameter)=>{
+        //     parameter(text);
+
+        // }
+        // const func2 = (par)=>{
+
+        // }
+
+        // let func3 = ()=>{
+
+        // }
+
+
+        // func1('hello world',(text)=>{
+        //     alert(text);
+        // })
+ 
+        //-----------------------------
+        //Destructure
+
+
+        // const arr = ['Djas', 'Joao', 'Jonas', 'Julia'];
+
+
+        // const [a,b,...c] = arr;
+
+
+        // alert(c[0]);
+
+        //------------------------------
+        //Rest e spread
+
+        // var names = [
+        //     {
+        //         name : 'Jonas'
+        //     },
+        //     {
+        //         name : 'Julia'
+        //     }
+        // ]
+
+
+        // const objects = [...names,{
+        //     name : 'Djas'
+        // }];
+
+        // console.log(objects);
+
+        function tests(...arr){
+            console.log(arr[0][0]);
+        }
+
+        tests([1,2,3,4,5],'Djas','Julia',{name:'Jonas'});
+
+
+
+        
+    </script>
+</body>
+</html>

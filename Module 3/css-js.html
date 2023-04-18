@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Css-js</title>
+</head>
+
+<body>
+
+    <!-- <div id ='Content'></div> -->
+
+    <div class="box">Hello World</div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+    <div class="box"></div>
+
+</body>
+
+<script>
+    
+
+    // var element = document.getElementById('Content');
+    // element.style.width = 100;
+    // element.style.height = 100;
+    // element.style.backgroundColor = 'Red';
+    // element.style.marginLeft = 200;
+
+    var elements = document.getElementsByClassName("box");
+    // var element = elements[0];
+    // element.style.width = 100;
+    // element.style.height = 100;
+    // element.style.backgroundColor = 'green';
+    // element.style.marginLeft = 200;
+
+    for(var i = 0; i < elements.length; i++){
+        var element = elements[i];
+        element.style.width = 100;
+        element.style.height = 100;
+        element.style.backgroundColor = 'Green';
+        element.style.marginLeft = 200;
+        element.style.marginTop = 10;
+        element.style.display = 'flex';
+        element.style.justifyContent = 'center';
+        element.style.borderWidth = 1;
+        element.style.borderColor = 'gray';
+        element.style.borderStyle = 'solid';
+        element.style.borderStyle = 'dotted';
+
+    }
+
+</script>
+
+</html>

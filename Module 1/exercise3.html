@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise 3</title>
+</head>
+<body>
+    <script>
+        
+        var number1 = prompt('Enter the first number: ');
+        var signal = prompt('Enter the operation: ');
+        while(signal != '-' && signal != '+' && signal != '/' && signal != '*'){
+            alert('please enter a valid signal!');
+            signal = prompt('Enter the operation: ');
+        }
+
+        var number2 = prompt('Enter the final number: ');
+
+        //converter string para int
+        number1 = parseInt(number1);
+        number2 = parseInt(number2);
+
+
+        var result = 0;
+        if(signal == '+'){
+            result = number1 + number2;
+        }else if (signal=='-'){
+            result = number1 - number2;
+        }else if(signal == '/'){
+            result = number1 / number2;
+        }else if(signal == '*'){
+            result = number1 * number2;
+        }
+
+        alert('The result of operation is : ' + result);
+
+    </script>
+</body>
+</html>

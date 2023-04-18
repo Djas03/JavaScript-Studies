@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test4</title>
+</head>
+<body>
+    <script>
+        function test1(){
+            console.log("Call test1");
+        }
+
+        function test2(name, old){
+            console.log('Name: '+name,'old: '+ old);
+        }
+
+        test1();
+        test2('Djas', 20);
+        console.log('------------------');
+
+        function getname(param){
+            if(param == 1)
+                return "Djas";
+            else    
+                return 'other name';
+        }
+
+        var name2 = getname(1);
+        var name3 = getname(0);
+
+        console.log('returned ',name2);
+        console.log('returned', name3);
+        console.log('------------------');
+
+        const function1 = function(){
+            console.log('Hello world');
+        }
+
+        function1();
+
+        (function(){
+            console.log('Hello world 1');
+        })();
+
+
+    </script>
+</body>
+</html>

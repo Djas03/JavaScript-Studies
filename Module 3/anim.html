@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>anim</title>
+</head>
+<body>
+    <style>
+        /* .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin-left: 0;
+        }
+        .animLeft{
+            transition: 1s;
+            margin-left: 10px;
+            margin-top: 20px;
+            background-color: green;
+        } */
+
+        .content h2 span{
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        .content p{
+            overflow:  hidden;
+            height: 10px;
+            transition: 1s; 
+        }
+        .show{
+            height: 200px !important; /*!important sobrescrever uma hierarquia mair*/
+        }
+    </style>
+
+<!-- <div class="box"></div> -->
+    <div class="content">
+        <h2>Title of content <span>See more!</span></h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+            Nulla euismod volutpat felis, at rutrum eros posuere nec. 
+            Nunc dolor arcu, consectetur id neque ut, volutpat posuere felis. 
+            Donec congue mauris sit amet elementum gravida. 
+            Pellentesque tincidunt urna non velit posuere, id convallis lorem volutpat. 
+            Integer pretium ligula sit amet mi semper aliquet. Quisque at ligula ex. 
+            Duis tincidunt tempor eros sed mattis. Maecenas non dictum nisl. 
+            Suspendisse scelerisque, lorem non euismod lobortis, justo lacus viverra dui, sed ultricies risus ipsum nec mi.</p>
+
+    </div>
+    
+    
+    
+    <script>
+
+        // var box = document.querySelectorAll('.box')[0];
+
+        // // setTimeout(()=>{
+        // //     box.classList.add('animLeft');
+        // // },1000);
+
+        // box.addEventListener('click',()=>{
+        //     box.classList.add('animLeft');
+        // })
+
+        var span = document.querySelector('.content span');
+        span.addEventListener('click', ()=>{
+            var content = document.querySelector('.content p');
+            if(content.classList.contains('show')){
+                span.innerHTML = ('See more!');
+                content.classList.remove('show');
+
+            }else{
+                span.innerHTML = ('Hide!');
+                content.classList.add('show');
+                
+            }
+        });
+
+    </script>
+</body>
+</html>

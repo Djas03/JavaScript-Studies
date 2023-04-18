@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css-js2</title>
+</head>
+<body>
+    <div class="test">
+        <div class="inside-test">Text</div>
+    </div>
+    
+    <div class="test">
+        <div class="inside-test">Text2</div>
+    </div>
+    <script>
+        var els = document.querySelectorAll('.test .inside-test');
+        els[0].style.color = 'red';
+        els[1].style.color = 'blue';
+        els[0].innerHTML = '<div class = "inside-test-via-js">Hello 2</div>';
+
+    </script>
+</body>
+</html>
